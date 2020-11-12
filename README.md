@@ -6,7 +6,7 @@ A simple REST-like NodeJS express JSON API for manipulating Yeelight.
 Gets all lights on LAN network.
 
 Example response:
-```json
+```
 [
     {
         "id": "0x00000000034ff670",
