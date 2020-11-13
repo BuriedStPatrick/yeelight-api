@@ -1,5 +1,5 @@
 # Yeelight NodeJS API
-A simple REST-like NodeJS Express JSON API for manipulating Yeelight.
+A simple REST-like NodeJS Express JSON API for manipulating Yeelight devices on LAN.
 This is a very simple ExpressJS wrapper around [yeelight2](https://github.com/song940/node-yeelight).
 
 * [Examples](#examples)
