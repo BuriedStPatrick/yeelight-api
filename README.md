@@ -47,10 +47,10 @@ Toggle a light on/off
 | id              | The id of the light |
 
 Example Body
-```json
+```
 {
-    "brightness": 100,
-    "effect": "smooth",
+    "brightness": 100, // 1 to 100
+    "effect": "smooth", // "smooth" | "sudden"
     "duration": 500
 }
 ```
