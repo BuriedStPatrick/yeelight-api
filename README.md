@@ -33,14 +33,14 @@ Example response:
 ```
 
 ### POST lights/:id/toggle
-Toggle a light on/off
+Toggle a light on/off.
 
 | Query Parameter | Description         |
 |-----------------|:--------------------|
 | id              | The id of the light |
 
 ### POST lights/:id/set_bright
-Toggle a light on/off
+Set a light's brightness value.
 
 | Query Parameter | Description         |
 |-----------------|:--------------------|
@@ -50,6 +50,22 @@ Example Body
 ```
 {
     "brightness": 100, // 1 to 100
+    "effect": "smooth", // "smooth" | "sudden"
+    "duration": 500
+}
+```
+
+### POST lights/:id/set_rgb
+Set light to a specific RGB color.
+
+| Query Parameter | Description         |
+|-----------------|:--------------------|
+| id              | The id of the light |
+
+Example Body
+```
+{
+    "value": "#ffffff", // Can be both with or without "#"
     "effect": "smooth", // "smooth" | "sudden"
     "duration": 500
 }
@@ -74,3 +90,4 @@ yarn start
 ```
 
 This will start the ts-node-dev watcher and automatically recompile and re-run the API when changes are made to source-files.
+The app runs on `http://localhost:3000` by default.
