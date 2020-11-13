@@ -6,7 +6,7 @@ This is a very simple ExpressJS wrapper around [yeelight2](https://github.com/so
 * [Setup](#setup)
 
 ## Examples
-### GET lights/
+### GET /
 Gets all lights on LAN network.
 
 Example response:
@@ -32,14 +32,14 @@ Example response:
 ]
 ```
 
-### POST lights/:id/toggle
+### POST /:id/toggle
 Toggle a light on/off.
 
 | Query Parameter | Description         |
 |-----------------|:--------------------|
 | id              | The id of the light |
 
-### POST lights/:id/set_bright
+### POST /:id/set_bright
 Set a light's brightness value.
 
 | Query Parameter | Description         |
@@ -55,7 +55,7 @@ Example Body
 }
 ```
 
-### POST lights/:id/set_rgb
+### POST /:id/set_rgb
 Set light to a specific RGB color.
 
 | Query Parameter | Description         |
