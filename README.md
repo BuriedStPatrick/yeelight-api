@@ -2,7 +2,10 @@
 A simple REST-like NodeJS Express JSON API for manipulating Yeelight.
 This is a very simple ExpressJS wrapper around [yeelight2](https://github.com/song940/node-yeelight).
 
-## Example request
+* [Examples](#examples)
+* [Setup](#setup)
+
+## Examples
 ### GET lights/
 Gets all lights on LAN network.
 
@@ -52,7 +55,7 @@ Example Body
 }
 ```
 
-## Setup and install packages
+## Setup
 ```
 yarn
 ```
