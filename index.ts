@@ -21,7 +21,7 @@ function get_prop(light: Light, prop: string): any {
     return (light as any)[prop];
 }
 
-app.get('/lights', (req, res) => {
+app.get('/', (req, res) => {
     return res.send(
         Object.keys(lights).map(key => {
             const light = lights[key];
@@ -34,13 +34,13 @@ app.get('/lights', (req, res) => {
     );
 });
 
-app.post('/lights/:id/toggle', (req, res) => {
+app.post('/:id/toggle', (req, res) => {
     lights[req.params.id].toggle();
 
     return res.status(200).send('Ok');
 });
 
-app.post('/lights/:id/set_bright', (req, res) => {
+app.post('/:id/set_bright', (req, res) => {
     lights[req.params.id].set_bright(
         req.body.brightness,
         req.body.effect,
@@ -50,7 +50,7 @@ app.post('/lights/:id/set_bright', (req, res) => {
     return res.status(200).send('Ok');
 });
 
-app.post('/lights/:id/:set_rgb', (req, res) => {
+app.post('/:id/set_rgb', (req, res) => {
     const rgbValue = req.body.value.replace('#', '');
     lights[req.params.id].set_rgb(
         parseInt(rgbValue, 16),
